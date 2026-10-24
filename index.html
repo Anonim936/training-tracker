@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя программа тренировок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>💪 Программа тренировок</h1>
+            <p class="subtitle">4 недели · сила, выносливость, здоровье</p>
+            <div class="week-selector">
+                <span class="week-label">Неделя:</span>
+                <div class="week-buttons" id="weekButtons">
+                    <button class="week-btn active" data-week="1">1</button>
+                    <button class="week-btn" data-week="2">2</button>
+                    <button class="week-btn" data-week="3">3</button>
+                    <button class="week-btn" data-week="4">4</button>
+                </div>
+            </div>
+            <div class="week-info" id="weekInfo"></div>
+        </header>
+
+        <nav class="schedule-nav">
+            <button class="day-btn" data-day="mon"><span>ПН</span><small>A</small></button>
+            <button class="day-btn" data-day="tue"><span>ВТ</span><small>B</small></button>
+            <button class="day-btn rest" data-day="wed"><span>СР</span><small>🚶</small></button>
+            <button class="day-btn" data-day="thu"><span>ЧТ</span><small>C</small></button>
+            <button class="day-btn rest" data-day="fri"><span>ПТ</span><small>🚶</small></button>
+            <button class="day-btn cardio" data-day="sat"><span>СБ</span><small>🏃</small></button>
+            <button class="day-btn rest" data-day="sun"><span>ВС</span><small>😴</small></button>
+        </nav>
+
+        <main id="workoutContent"></main>
+
+        <section class="checklist-section">
+            <h2>📋 Чек-лист недели</h2>
+            <div class="checklist" id="checklist">
+                <label class="check-item"><input type="checkbox" data-task="workoutA"><span>Выполнил тренировку A</span></label>
+                <label class="check-item"><input type="checkbox" data-task="workoutB"><span>Выполнил тренировку B</span></label>
+                <label class="check-item"><input type="checkbox" data-task="workoutC"><span>Выполнил тренировку C</span></label>
+                <label class="check-item"><input type="checkbox" data-task="lightActivity"><span>Добавил лёгкую активность</span></label>
+                <label class="check-item"><input type="checkbox" data-task="recovery"><span>Выспался и восстановился</span></label>
+            </div>
+            <div class="checklist-progress">
+                <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                <span id="progressText">0 из 5</span>
+            </div>
+            <button class="btn-new-week" id="newWeekBtn">Начать новую неделю →</button>
+        </section>
+
+        <section class="tips-section">
+            <h2>🥗 Питание и восстановление</h2>
+            <ul class="tips-list">
+                <li>Ешь регулярно: белок, крупы, овощи, фрукты, полезные жиры</li>
+                <li>Никакого голодания и жёстких диет</li>
+                <li>Добавляй прогулки, велосипед — то, что нравится</li>
+                <li>Спи 8–10 часов</li>
+                <li>Боль, головокружение — прекращай тренировку</li>
+            </ul>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
